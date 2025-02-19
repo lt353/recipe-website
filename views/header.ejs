@@ -1,0 +1,17 @@
+<!-- This header will include a title and a navigation bar with links to the home page and each recipe page.
+     The navigation bar will be created using a loop that will create a link for each recipe in the recipes array.
+     The link will take the user to the recipe page for that recipe.
+     This uses ejs with the <%= %> syntax to embed JavaScript code within the HTML.
+-->
+<!-- Debugging: Check if recipes is being passed correctly -->
+<header>
+    <h1>My Recipe Collection</h1>
+    <nav>
+        <a href="/">Home</a>
+        <% if (typeof recipes !== "undefined") { %>
+            <% recipes.forEach((recipe, index) => { %>
+                | <a href="/recipe<%= index + 1 %>"><%= recipe.title %></a>
+            <% }); %>
+        <% } %>
+    </nav>
+</header>

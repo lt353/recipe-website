@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    font-family: "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #d9e5e5; /* Soft Blue-Gray */
+    color: #333; /* Dark Gray */
+}
+
+/* Header */
+header {
+    background-image: url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 32px;
+    color: white; /* Make sure it's readable */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow for better contrast */
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white; /* Make links white for contrast */
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ffd700; /* Gold color for hover effect */
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Recipe List */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #d0dcdc; /* Light Gray-Blue */
+    color: #333;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Horizontal Rule */
+hr {
+    border: none;
+    height: 2px;
+    background-color: #d2dede; /* Pale Blue */
+    margin: 20px 0;
+}
