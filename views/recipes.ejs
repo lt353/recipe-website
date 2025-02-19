@@ -12,11 +12,13 @@
     <main>
         <!-- This will display the recipe title and description. Different depending on which recipe 
              Was selected. -->
-        <h2><%= recipe.title %></h2>
+        <h2><%= recipe.title %></h2> <!-- I had the hardest time because I labeled these recipes.title & recipes.content for a while-->
         <p><%= recipe.content %></p>
         <% if (recipe.ingredients) { %>
             <h3>Ingredients</h3>
             <ul>
+                <!-- This will display a list of ingredients. The ingredients are stored in an array, 
+                     so we use a forEach loop to go through the array and display each ingredient. -->
                 <% recipe.ingredients.forEach((ingredient) => { %>
                     <li><%= ingredient %></li>
                 <% }); %>
@@ -26,6 +28,8 @@
         <% if (recipe.instructions) { %>
             <h3>Instructions</h3>
             <ol>
+                <!-- This will display a list of instructions. The instructions are stored in an array, 
+                     so we use a forEach loop to go through the array and display each instruction. -->
                 <% recipe.instructions.forEach((instruction) => { %>
                     <li><%= instruction %></li>
                 <% }); %>

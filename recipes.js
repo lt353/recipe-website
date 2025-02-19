@@ -1,3 +1,10 @@
+/* 
+ * Purpose: To store an array of recipes that can be used in index.js
+ * The recipes array is an array of objects
+ * Each object has a title and content property
+ * The title is the name of the recipe
+ * The content is the recipe instructions
+ */
 const recipes = [
   {
     title: "Recipe 1",

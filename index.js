@@ -47,7 +47,7 @@ app.get("/", function (req, res) {
 recipes.forEach((recipe, index) => {
     app.get(`/recipe${index + 1}`, (req, res) => {
         res.render("recipes", {
-            recipe: recipe // Passing the entire recipe object
+            recipe: recipe // Passing the entire recipe object. I tried passing just the title and content properties, but it didn't work.
         });
     });
 });
