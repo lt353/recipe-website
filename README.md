@@ -4,6 +4,7 @@ I am still working on this but so far I have a bare bones website with 4 webpage
   - Recipe 1
   - Recipe 2
   - Recipe 3
+
 There is a navigation bar in the header which is available throughout all the webpages. There is also a footer available  as well on every page.
 
 I've created some very rough styling and content. No actual recipes yet and the styling needs a lot of work, though I like the picture in the header. 
