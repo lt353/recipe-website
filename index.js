@@ -15,6 +15,10 @@
  * External Packages Used:
  * - express (http://www.npmjs.com/package/express)
  * - ejs (https://www.npmjs.com/package/ejs)
+ *
+ * Images found on Unsplash, specifically from: 
+ * - Brooke Lark (https://unsplash.com/@brookelark)
+ * - 
  */
 
 // Importing the express package

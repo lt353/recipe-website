@@ -7,15 +7,15 @@
  */
 const recipes = [
   {
-    title: "Recipe 1",
+    title: "Green Thai Chicken Curry",
     content: "This is the first recipe."
   },
   {
-    title: "Recipe 2",
+    title: "Crispy Chicken Griddle Tacos",
     content: "This is the second recipe."
   },
   {
-    title: "Recipe 3",
+    title: "Chicken Marsala",
     content: "This is the third recipe."
   }
 ];

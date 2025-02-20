@@ -4,18 +4,42 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #d9e5e5; /* Soft Blue-Gray */
-    color: #333; /* Dark Gray */
+    background-image: url(/images/background.jpg);
+    /*Initially this image was WAY too zoomed in, so I figured out the rest of this to fix it:*/
+    background-size: cover; /* covers the full screen */
+    background-position: top center;
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps it from scrolling */
+    width: 100vw; /* Ensures full width */
+    height: 100vh; /* Ensures full height */
+    color: #333; /* Text is Dark Gray */
+    /*The following is to help fix the footer in one place*/
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    margin: 0;
 }
 
-/* Header */
 header {
-    background-image: url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover;
-    background-position: center;
-    padding: 50px;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    background-image: url('/images/header.jpg'); /* Sets the background image for the header */
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image */
+    padding: 50px; /* Adds space inside the header */
+    color: white; /* Makes the text white for readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adds a shadow to text for better contrast */
+    position: relative; /* Allows us to add a shadow effect below */
+}
+
+/* Creates a subtle fading shadow below the header. I got a lot of help from ChatGPT for this */
+header::after {
+    content: ""; /* This is a pseudo-element that acts as a visual effect */
+    position: absolute; /* Positions it relative to the header */
+    bottom: 0; /* Aligns it to the bottom of the header */
+    left: 0; /* Ensures it stretches across the whole width */
+    width: 100%; /* Makes it as wide as the header */
+    height: 10px; /* Adjust thickness of the shadow */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
+    /* Creates a smooth transition from black to transparent */
 }
 
 header h1 {
@@ -27,9 +51,10 @@ header h1 {
 
 /* Navigation */
 nav {
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
-    padding: 10px;
+    background-color: rgba(100, 100, 100, 0.6); /* Semi-transparent grey */
+    padding: 15px;
     text-align: center;
+    border-radius: 8px; /* Soften edges */
 }
 
 nav a {
@@ -46,26 +71,41 @@ nav a:hover {
 
 /* Main Content */
 main {
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85); /* Increase opacity for better readability */
+    padding: 40px; /* Add more spacing inside */
+    border-radius: 12px; /* Slightly round corners for a modern look */
+    margin: 40px auto; /* Add vertical spacing */
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
 }
 
 /* Recipe List */
 ul {
-    list-style-type: none;
+    list-style-type: none; /* No dots or numbers */
     padding: 0;
 }
 
+/* Adds spacing between each list item */
 li {
-    margin: 10px 0;
+    margin: 12px 0;
+}
+/* Styles the links to look like buttons */
+
+/* Ensures only links inside <main> are affected */
+main a {
+    color: #004085; /* Deep blue for readability */
+    font-weight: bold; /* Makes text slightly bolder */
+    font-size: 18px; /* Makes text easier to read */
+    text-decoration: none; /* Removes underline */
+    border-bottom: 2px solid transparent; /* Prepares for hover effect */
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
 }
 
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+/* Hover effect: subtle underline appears */
+main a:hover {
+    color: #002752; /* Slightly darker blue on hover */
+    border-bottom: 2px solid #004085; /* Adds a soft underline */
 }
 
 /* Footer */
@@ -73,7 +113,7 @@ footer {
     background-color: #d0dcdc; /* Light Gray-Blue */
     color: #333;
     padding: 10px;
-    margin-top: 20px;
+    text-align: center;
 }
 
 /* Horizontal Rule */
