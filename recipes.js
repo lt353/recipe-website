@@ -11,6 +11,7 @@ const recipes = [
     {
         title: "Green Thai Chicken Curry",
         content: "A rich and aromatic Thai curry with tender chicken and fresh herbs.",
+        image: "images/thaiCurry.jpg",
         ingredients: [
           "4-5 Boneless/Skinless Chicken thighs",
           "1/2 onion",
@@ -42,11 +43,13 @@ const recipes = [
     },
     {
         title: "Crispy Chicken Griddle Tacos",
-        content: "This is the second recipe."
+        content: "This is the second recipe.",
+        image: "images/chickenTacos.jpg"
     },
     {
         title: "Chicken Marsala",
-        content: "This is the third recipe."
+        content: "This is the third recipe.",
+        image: "images/chickenMarsala.jpg"
     }
 ];
 // Exporting the recipes array so it can be used in index.js

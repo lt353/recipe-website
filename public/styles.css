@@ -5,47 +5,45 @@ body {
     padding: 0;
     text-align: center;
     background-image: url(/images/background.jpg);
-    /*Initially this image was WAY too zoomed in, so I figured out the rest of this to fix it:*/
-    background-size: cover; /* covers the full screen */
+    /* Initially, this image was WAY too zoomed in, so I adjusted the properties below */
+    background-size: cover; /* Covers the full screen */
     background-position: top center;
     background-repeat: no-repeat; /* Prevents tiling */
-    background-attachment: fixed; /* Keeps it from scrolling */
-    width: 100vw; /* Ensures full width */
-    height: 100vh; /* Ensures full height */
-    color: #333; /* Text is Dark Gray */
-    /*The following is to help fix the footer in one place*/
+    background-attachment: fixed; /* Keeps background static while scrolling */
+    color: #333; /* Text color set to Dark Gray */
+    /* The following ensures the footer stays fixed at the bottom */
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-    margin: 0;
 }
 
+/* Header */
 header {
     background-image: url('/images/header.jpg'); /* Sets the background image for the header */
     background-size: cover; /* Ensures the image covers the entire header */
     background-position: center; /* Centers the image */
     padding: 50px; /* Adds space inside the header */
     color: white; /* Makes the text white for readability */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adds a shadow to text for better contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adds a shadow for better contrast */
     position: relative; /* Allows us to add a shadow effect below */
 }
 
-/* Creates a subtle fading shadow below the header. I got a lot of help from ChatGPT for this */
+/* Creates a subtle fading shadow below the header */
 header::after {
-    content: ""; /* This is a pseudo-element that acts as a visual effect */
+    content: ""; /* This pseudo-element acts as a visual effect */
     position: absolute; /* Positions it relative to the header */
     bottom: 0; /* Aligns it to the bottom of the header */
-    left: 0; /* Ensures it stretches across the whole width */
-    width: 100%; /* Makes it as wide as the header */
+    left: 0; /* Stretches across the whole width */
+    width: 100%; /* Ensures full width */
     height: 10px; /* Adjust thickness of the shadow */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
-    /* Creates a smooth transition from black to transparent */
 }
 
+/* Header text styling */
 header h1 {
-    font-size: 32px;
-    color: white; /* Make sure it's readable */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow for better contrast */
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     text-align: center;
 }
 
@@ -54,11 +52,11 @@ nav {
     background-color: rgba(100, 100, 100, 0.6); /* Semi-transparent grey */
     padding: 15px;
     text-align: center;
-    border-radius: 8px; /* Soften edges */
+    border-radius: 8px; /* Softens edges */
 }
 
 nav a {
-    color: white; /* Make links white for contrast */
+    color: white;
     text-decoration: none;
     font-size: 18px;
     margin: 0 15px;
@@ -66,21 +64,21 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    color: #ffd700; /* Gold color for hover effect */
+    color: #ffd700; /* Gold hover effect */
 }
 
 /* Main Content */
 main {
-    background-color: rgba(255, 255, 255, 0.85); /* Increase opacity for better readability */
-    padding: 40px; /* Add more spacing inside */
-    border-radius: 12px; /* Slightly round corners for a modern look */
-    margin: 40px auto; /* Add vertical spacing */
-    width: 85%;
-    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.85); /* Increases opacity for better readability */
+    padding: 40px; /* Adds spacing inside */
+    border-radius: 12px; /* Slightly rounded corners for modern look */
+    margin: 40px auto; /* Adds vertical spacing */
+    width: 65%;
+    max-width: 1500px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
 }
 
-/* Description (subheading below title) */
+/* Recipe title styling */
 h2 {
     font-size: 36px; 
     font-weight: bold;
@@ -91,63 +89,90 @@ h2 {
 
 /* Section Headers: "Ingredients" & "Instructions" */
 h3 {
-    font-size: 22px; /* Increase header size */
+    font-size: 22px;
     font-weight: bold;
     text-transform: uppercase; /* Makes headers stand out */
-    color: #0a6765; /* Dark Teal to match theme */
-    text-align: left; /* Align left for structure */
+    color: #0a6765; /* Dark Teal for consistent theme */
+    text-align: left;
     margin-bottom: 15px;
-    border-bottom: 2px solid #ddd; /* Subtle underline */
+    border-bottom: 2px solid #ddd; /* Subtle underline for separation */
     padding-bottom: 5px;
 }
 
-/* 🥦 Ingredients List: Simple and aligned */
-.ingredient-list {
-    list-style-type: disc; /* Uses bullet points */
-    margin-left: 20px; /* Keeps it properly aligned */
-    padding-left: 10px;
-    text-align: left; /* Aligns with bullet points */
+li {
+    font-size: 15px;
+    list-style-type: none; /* Removes default bullet points */
 }
 
-/* Instructions List: No bullet points */
+/* Centers the recipe image */
+.image-container {
+    text-align: center;
+    margin: 30px 0; /* Adds space above and below the image */
+}
+
+/* Adjusts recipe image */
+.recipe-image {
+    max-width: 100%;
+    width: 1000px; /* Default size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensures image is responsive on small screens */
+@media (max-width: 768px) {
+    .recipe-image {
+        width: 90%;
+    }
+}
+
+/* Ingredients List: Simple and aligned */
+.ingredient-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+/* Instructions List: Removes bullets */
 .instruction-list {
-    list-style-type: none; /* Removes bullets */
-    padding-left: 0; /* Aligns with text */
+    list-style-type: none; /* No bullets */
+    padding-left: 0;
     text-align: left;
 }
 
 /* Improves spacing for both lists */
 .ingredient-list li,
 .instruction-list li {
-    margin-bottom: 12px; /* Adds space between items */
+    margin-bottom: 12px; /* Adds spacing between items */
     line-height: 1.6; /* Improves readability */
     display: flex;
-    align-items: flex-start; /* Aligns text at the top */
+    align-items: flex-start;
     gap: 8px; /* Adds space between icon and text */
 }
 
 /* Makes step numbers bold and readable */
 .instruction-list li strong {
     font-size: 18px;
-    flex-shrink: 0; /* Prevents shrinking */
-    width: 70px; /* Adjust width as needed */
+    flex-shrink: 0;
+    width: 70px;
     text-align: left;
 }
 
 /* Ensures only links inside <main> are affected */
 main a {
     color: #004085; /* Deep blue for readability */
-    font-weight: bold; /* Makes text slightly bolder */
-    font-size: 18px; /* Makes text easier to read */
-    text-decoration: none; /* Removes underline */
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
     border-bottom: 2px solid transparent; /* Prepares for hover effect */
     transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
 }
 
-/* Hover effect: subtle underline appears */
+/* Hover effect for links */
 main a:hover {
-    color: #002752; /* Slightly darker blue on hover */
-    border-bottom: 2px solid #004085; /* Adds a soft underline */
+    color: #3076c1;
+    border-bottom: 2px solid #3076c1;
 }
 
 /* Footer */
