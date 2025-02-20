@@ -18,7 +18,11 @@
  *
  * Images found on Unsplash, specifically from: 
  * - Brooke Lark for header & background images (https://unsplash.com/@brookelark)
- * - 
+ * - Nick Varvounis for the thai curry (https://unsplash.com/@nickkarvounis)
+ * 
+ * And images from: 
+ * - https://theflavoursofkitchen.com/ for the crispy chicken tacos
+ * - https://sanitasbynikki.com/ for the chicken marsala
  */
 
 // Importing the express package

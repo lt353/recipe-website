@@ -10,31 +10,33 @@
     <!-- This will include the header, which contains the title and navigation bar. -->
     <%- include("header") -%>
     <main>
-        <!-- This will display the recipe title and description. Different depending on which recipe 
-             Was selected. -->
-        <h2><%= recipe.title %></h2> <!-- I had the hardest time because I labeled these recipes.title & recipes.content for a while-->
-        <p><%= recipe.content %></p>
-        <% if (recipe.ingredients) { %>
-            <h3>Ingredients</h3>
-            <ul>
-                <!-- This will display a list of ingredients. The ingredients are stored in an array, 
-                     so we use a forEach loop to go through the array and display each ingredient. -->
-                <% recipe.ingredients.forEach((ingredient) => { %>
-                    <li><%= ingredient %></li>
-                <% }); %>
-            </ul>
-        <% } %>
-        
-        <% if (recipe.instructions) { %>
-            <h3>Instructions</h3>
-            <ol>
-                <!-- This will display a list of instructions. The instructions are stored in an array, 
-                     so we use a forEach loop to go through the array and display each instruction. -->
-                <% recipe.instructions.forEach((instruction) => { %>
-                    <li><%= instruction %></li>
-                <% }); %>
-            </ol>
-        <% } %>
+        <div class="recipe-container">
+            <!-- This will display the recipe title and description. Different depending on which recipe 
+                Was selected. -->
+            <h2><%= recipe.title %></h2> <!-- I had the hardest time because I labeled these recipes.title & recipes.content for a while-->
+            <p><%= recipe.content %></p>
+            <% if (recipe.ingredients) { %>
+                <h3>Ingredients</h3>
+                <ul class="ingredient-list">
+                    <!-- This will display a list of ingredients. The ingredients are stored in an array, 
+                        so we use a forEach loop to go through the array and display each ingredient. -->
+                    <% recipe.ingredients.forEach((ingredient) => { %>
+                        <li><%= ingredient %></li>
+                    <% }); %>
+                </ul>
+            <% } %>
+            
+            <% if (recipe.instructions) { %>
+                <h3>Instructions</h3>
+                <ul class="instruction-list">
+                    <!-- This will display a list of instructions. The instructions are stored in an array, 
+                        so we use a forEach loop to go through the array and display each instruction. -->
+                    <% recipe.instructions.forEach((instruction, index) => { %>
+                        <li><strong>Step <%= index + 1 %>:</strong><%= instruction %></li>
+                    <% }); %>
+                </ul>
+            <% } %>
+        </div>
     </main>
     <!-- This will include the footer, which contains the copyright information. -->
     <%- include("footer") -%>

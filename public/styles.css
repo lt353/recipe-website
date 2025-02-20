@@ -75,22 +75,64 @@ main {
     padding: 40px; /* Add more spacing inside */
     border-radius: 12px; /* Slightly round corners for a modern look */
     margin: 40px auto; /* Add vertical spacing */
-    width: 80%;
+    width: 85%;
     max-width: 900px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
 }
 
-/* Recipe List */
-ul {
-    list-style-type: none; /* No dots or numbers */
-    padding: 0;
+/* Description (subheading below title) */
+h2 {
+    font-size: 36px; 
+    font-weight: bold;
+    text-align: center;
+    color: #015777; /* Deep Blue */
+    margin-bottom: 10px;
 }
 
-/* Adds spacing between each list item */
-li {
-    margin: 12px 0;
+/* Section Headers: "Ingredients" & "Instructions" */
+h3 {
+    font-size: 22px; /* Increase header size */
+    font-weight: bold;
+    text-transform: uppercase; /* Makes headers stand out */
+    color: #0a6765; /* Dark Teal to match theme */
+    text-align: left; /* Align left for structure */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd; /* Subtle underline */
+    padding-bottom: 5px;
 }
-/* Styles the links to look like buttons */
+
+/* 🥦 Ingredients List: Simple and aligned */
+.ingredient-list {
+    list-style-type: disc; /* Uses bullet points */
+    margin-left: 20px; /* Keeps it properly aligned */
+    padding-left: 10px;
+    text-align: left; /* Aligns with bullet points */
+}
+
+/* Instructions List: No bullet points */
+.instruction-list {
+    list-style-type: none; /* Removes bullets */
+    padding-left: 0; /* Aligns with text */
+    text-align: left;
+}
+
+/* Improves spacing for both lists */
+.ingredient-list li,
+.instruction-list li {
+    margin-bottom: 12px; /* Adds space between items */
+    line-height: 1.6; /* Improves readability */
+    display: flex;
+    align-items: flex-start; /* Aligns text at the top */
+    gap: 8px; /* Adds space between icon and text */
+}
+
+/* Makes step numbers bold and readable */
+.instruction-list li strong {
+    font-size: 18px;
+    flex-shrink: 0; /* Prevents shrinking */
+    width: 70px; /* Adjust width as needed */
+    text-align: left;
+}
 
 /* Ensures only links inside <main> are affected */
 main a {
