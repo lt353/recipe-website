@@ -4,6 +4,8 @@
  * Each object has a title and content property
  * The title is the name of the recipe
  * The content is the recipe instructions
+ * The ingredients property is an array of ingredients
+ * The instructions property is an array of instructions 
  */
 const recipes = [
     {

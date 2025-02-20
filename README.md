@@ -19,14 +19,17 @@ I've created some very rough styling and content. No actual recipes yet and the 
 - Adjusted styling of the navigation links on homepage. 
 - Created a bit of a stylized border at the bottom of th header. 
 - Fixed the footer to the bottom of the page. 
+- Put in the thai curry recipe
+- Made a lot of styling adjustments for the recipes pages
+- Made a slight content change in recipes.ejs (Each step # in bold)
+- Found images for the recipes (not added into content yet)
 
 
 # Still to-do: 
 - Insert the actual recipes in recipes.js
   - Ingredients (as a list)
   - Step-by-step insstructions
-  - Optional Notes or tips
-- Update recipes.ejs to diplay the ingredients and instructions.
-- Find and insert pictures (store in /public/images/recipe(#).jpg)
+- Update recipes.ejs to diplay the ingredients and instructions for the remaining recipes
+- Insert pictures (store in /public/images/recipe(#).jpg)
   - Update recipes.js to include the image paths
 - Maybe add more of a writeup above the recipes on the homepage. 
