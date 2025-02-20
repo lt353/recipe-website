@@ -8,17 +8,24 @@ There is a navigation bar in the header which is available throughout all the we
 
 I've created some very rough styling and content. No actual recipes yet and the styling needs a lot of work, though I like the picture in the header. 
 
+# Recently completed: 
+- Improved navigation
+  - Fixed the background (lightened)
+  - Adjusted spacing between the items.
+  - Make it fixed at the top so it stays visible when scrolling
+- Turn the titles into the actual names of the recipes
+- Added a background to the body and adjusted the styling of main (semi-transparent white box) so that the text could still stand out. 
+- Adjusted styling of the navigation links on homepage. 
+- Created a bit of a stylized border at the bottom of th header. 
+- Fixed the footer to the bottom of the page. 
+
+
 # Still to-do: 
-- Chose and insert the actual recipes in recipes.js
+- Insert the actual recipes in recipes.js
   - Ingredients (as a list)
   - Step-by-step insstructions
   - Optional Notes or tips
 - Update recipes.ejs to diplay the ingredients and instructions.
-- Improve navigation
-  - Currently recipe pages only have 'Home' in the nav bar. Maybe it should hav links to all recipes?
-  - Fix the background, it's too dark I think.
-  - Adjust spacing between the items.
-  - Make it fixed at the top so it stays visible when scrolling
-- Find and insert pictures (store in /public/images/recipe(#).jpg
+- Find and insert pictures (store in /public/images/recipe(#).jpg)
   - Update recipes.js to include the image paths
-- Turn the titles into the actual names of the recipes
+- Maybe add more of a writeup above the recipes on the homepage. 

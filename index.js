@@ -17,7 +17,7 @@
  * - ejs (https://www.npmjs.com/package/ejs)
  *
  * Images found on Unsplash, specifically from: 
- * - Brooke Lark (https://unsplash.com/@brookelark)
+ * - Brooke Lark for header & background images (https://unsplash.com/@brookelark)
  * - 
  */
 
