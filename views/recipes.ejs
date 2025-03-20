@@ -9,43 +9,48 @@
 <body>
     <!-- This will include the header, which contains the title and navigation bar. -->
     <%- include("header") -%>
+
     <main>
         <div class="recipe-container">
             <h2><%= recipe.title %></h2>
             <p><%= recipe.content %></p>
+
+            <!-- Recipe Image -->
+            <% if (recipe.image) { %>
+                <div class="image-container">
+                    <img src="/<%= recipe.image %>" alt="<%= recipe.title %>" class="recipe-image-large">
+                </div>
+            <% } %>
+
+            <!-- Print Recipe Button -->
+            <button class="print-button" onclick="window.print()">🖨️ Print Recipe</button>
         
             <!-- Ingredients Section -->
             <% if (recipe.ingredients) { %>
                 <h3>Ingredients</h3>
                 <ul class="ingredient-list">
-                    <!-- Loop through each ingredient and display it as a list item. -->
-                    <% recipe.ingredients.forEach((ingredient) => { %>
-                        <li><%= ingredient %></li>
+                    <!-- Loop through each ingredient object -->
+                    <% recipe.ingredients.forEach(ingredient => { %>
+                        <!-- Display the quantity, unit, and ingredient name all together -->
+                        <li><%= ingredient.quantity %> <%= ingredient.unit %> <%= ingredient.ingredient %></li>
                     <% }); %>
                 </ul>
-            <% } %>
-        
-            <!-- Recipe Image -->
-            <% if (recipe.image) { %>
-                <div class="image-container">
-                    <!-- Display the image with the title as the alt text. -->
-                    <img src="<%= recipe.image %>" alt="<%= recipe.title %>" class="recipe-image">
-                </div>
             <% } %>
         
             <!-- Instructions Section -->
             <% if (recipe.instructions) { %>
                 <h3>Instructions</h3>
-                <ul class="instruction-list">
-                    <!-- Loop through each instruction and display it as a list item. -->
-                    <% recipe.instructions.forEach((instruction, index) => { %>
-                        <li><strong>Step <%= index + 1 %>:</strong> <%= instruction %></li>
+                <ol class="instruction-list">
+                    <% recipe.instructions.forEach((step, index) => { %>
+                        <li><strong>Step <%= index + 1 %>:</strong> <%= step %></li>
                     <% }); %>
-                </ul>
+                </ol>
             <% } %>
         </div>        
     </main>
+
     <!-- This will include the footer, which contains the copyright information. -->
     <%- include("footer") -%>
+
 </body>
 </html>

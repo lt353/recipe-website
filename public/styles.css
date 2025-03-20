@@ -44,10 +44,9 @@ header h1 {
     font-size: 40px;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    text-align: center;
-}
+} 
 
-/* Navigation */
+/* Navigation Bar*/
 nav {
     background-color: rgba(100, 100, 100, 0.6); /* Semi-transparent grey */
     padding: 15px;
@@ -55,16 +54,47 @@ nav {
     border-radius: 8px; /* Softens edges */
 }
 
-nav a {
+/* Navigation Links in the header */
+nav a { 
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* Removes underline */
     font-size: 18px;
     margin: 0 15px;
 }
 
+/* When the mouse hovers over a link the color changes and an underline appears */
 nav a:hover {
     text-decoration: underline;
-    color: #ffd700; /* Gold hover effect */
+    color: #ffd700; /* Yellowish Gold */
+}
+
+/*Intro Section on the homepage*/
+.intro {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 25px;
+    margin: 20px auto; /* Auto centers the section */
+    border-radius: 12px; /* Slightly rounded corners */
+    max-width: 800px; /* Limits width for better readability */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    width: 70%; /* Adjusts width for responsiveness */
+}
+
+/* Intro Section Heading homepage */
+.intro hi {
+    font-size: 32px;
+    font-weight: bold;
+    color: #015777; /* Deep Blue */
+    margin-bottom: 10px; /* Adds space below the heading */
+}
+
+/* Intro section text below the heading */
+.intro p {
+    font-size: 18px;
+    line-height: 1.6; /* Improves readability */
+    text-align: left; /* Aligns text to the left */
+    color: #015777; /* Deep Blue */
+    margin-bottom: 10px; /* Adds space below the paragraph */
 }
 
 /* Main Content */
@@ -76,6 +106,56 @@ main {
     width: 65%;
     max-width: 1500px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+/* === Recipe Grid (homepage) === */
+.recipe-grid {
+    display: grid; /* Enables grid layout, similar to a table, but more flexible */
+    /* Creates responsive columns so that each recipe card fits even on small screens */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+    gap: 20px; /* Adds space between recipe cards */
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Recipe Card */
+.recipe-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.2s ease-in-out; /* this means that when you hover over the card, it grows in size, but smoothly*/
+}
+
+.recipe-card:hover {
+    transform: scale(1.05); /* Increases size slightly when mouse is over the card */
+}
+
+/* Recipe Thumbnail - a smaller recipe image than on the recipe page */
+.recipe-image {
+    width: 100%;
+    max-height: 180px; /* Limits height to prevent stretching */
+    border-radius: 10px;
+    object-fit: cover; /* Ensures the image fills the container */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Recipe Title located below the thumbnail */
+.recipe-card h2 {
+    font-size: 24px;
+    margin: 10px 0; /* Adds space above and below the title */
+}
+
+/* Recipe Card Link */
+.recipe-card a {
+    text-decoration: none; /* Removes underline */
+    color: #333;
+    font-weight: bold;
+}
+
+.recipe-card a:hover {
+    color: #e67e22; /* Orange color on hover */
 }
 
 /* Recipe title styling */
@@ -99,29 +179,43 @@ h3 {
     padding-bottom: 5px;
 }
 
-li {
-    font-size: 15px;
-    list-style-type: none; /* Removes default bullet points */
+/* List styling for ingredients and instructions */
+.ingredient-list,
+.instruction-list {
+    font-size: 20px;
+    padding-left: 20px; 
 }
 
-/* Centers the recipe image */
+.ingredient-list li,
+.instruction-list li {
+    margin-bottom: 12px; /* Adds space between items */
+    line-height: 1.6; /* Improves readability */
+    /*removes bullets from the list*/
+    list-style-type: none;
+}
+
+
+/* Centers the recipe page image (not homepage) */
 .image-container {
     text-align: center;
     margin: 30px 0; /* Adds space above and below the image */
 }
 
-/* Adjusts recipe image */
-.recipe-image {
-    max-width: 100%;
-    width: 1000px; /* Default size */
-    height: auto;
+/* Adjusts large recipe image */
+.recipe-image-large {
+    width: 100%; /* Ensures the image scales with the container */
+    max-width: 800px; /* Prevents it from getting too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Prevents extra space below the image */
+    margin: 0 auto; /* Centers the image */
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    object-fit: contain; /* Ensures the full image is visible without cropping */
 }
 
 /* Ensures image is responsive on small screens */
 @media (max-width: 768px) {
-    .recipe-image {
+    .recipe-image-large {
         width: 90%;
     }
 }
@@ -159,34 +253,52 @@ li {
     text-align: left;
 }
 
-/* Ensures only links inside <main> are affected */
-main a {
-    color: #004085; /* Deep blue for readability */
+/* This adjusts the print button on the recipe pages */
+.print-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
     font-weight: bold;
-    font-size: 20px;
-    text-decoration: none;
-    border-bottom: 2px solid transparent; /* Prepares for hover effect */
-    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+    color: white;
+    background-color: #015777; /* Matches theme */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Hover effect for links */
-main a:hover {
-    color: #3076c1;
-    border-bottom: 2px solid #3076c1;
+.print-button:hover {
+    background-color: #0a6765; /* Slightly lighter on hover */
+}
+
+/* By default, printing will include everything on the page, which nobody wants
+ * so this will hide the header, footer, image, and navigation bar when printing */
+@media print {
+    header, footer, nav, .print-button {
+        display: none; /* Hides navigation and buttons when printing */
+    }
+
+    body {
+        background: none; /* Removes background image */
+        color: black; /* Ensures readability */
+    }
+
+    main {
+        width: 100%; /* Expands content for better printing */
+        box-shadow: none;
+        background: white;
+    }
+
+    .recipe-image-large {
+        display: none; /* Hides large image when printing */
+    }
 }
 
 /* Footer */
 footer {
     background-color: #d0dcdc; /* Light Gray-Blue */
-    color: #333;
+    color: #333; /* Dark Gray */
     padding: 10px;
     text-align: center;
-}
-
-/* Horizontal Rule */
-hr {
-    border: none;
-    height: 2px;
-    background-color: #d2dede; /* Pale Blue */
-    margin: 20px 0;
 }

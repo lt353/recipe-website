@@ -5,27 +5,50 @@
     <!-- This will set the viewport to the width of the device and set the initial scale to 1.0. 
      meaning the page will be displayed at 100% zoom. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipes Homepage</title>
+    <title>My Recipe Collection Homepage</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <!-- This will include the header, which contains the title and navigation bar. -->
     <%- include("header")-%>
-    <main>
-        <h2>Welcome to My Recipe Collection</h2>
-        <p>Here you will find a collection of recipes that I have created over the years. 
-           Click on a recipe title to view the details.</p>
-        <h3>Recipes</h3>
-        <ul>
-            <!-- This will display a list of recipe titles. -->
-            <% recipes.forEach((recipe, index) => { %>
-                <li>
-                    <!-- This will create a link to the recipe page for each recipe title. -->
-                    <a href="/recipe<%= index + 1 %>"><%= recipe.title %></a>
-                </li>
-            <% }); %>
-        </ul>
-    </main>
+
+    <!-- This is the main content of the page. -->
+    <!-- It contains an introduction section and a grid of recipe cards. 
+         They are broken up into sections so that they can be styled separately. -->
+    <section class="intro">
+        <h1>Welcome to My Recipe Collection</h1>
+        <p>
+            When I’m not studying hard for my ICS 360 class and learning all about web development, 
+            I love to cook! Making dinner for my family is something I truly enjoy, and these are just 
+            a few of my go-to recipes. I hope you enjoy them as much as we do!
+        </p>
+        <p>
+            Whether it's a cozy Green Thai Chicken Curry, Crispy Chicken Griddle Tacos, or 
+            a classic Chicken Marsala, I love experimenting with flavors while keeping things simple.
+        </p>
+    </section>
+
+    <!-- This is the grid of recipe cards. 
+         It will display a card for each recipe in the recipes array. Both the image and 
+         the title of the recipe will be displayed on the card and will be clickable. -->
+    <section class="recipe-grid">
+        <% recipes.forEach(recipe => { %>
+            <div class="recipe-card">
+                <!-- encodeURIComponent is used to encode the title so that it can be safely passed in the URL. 
+                    by wrapping it in the ancor tag, the image and title will be clickable. -->
+                <a href="/recipe/<%= encodeURIComponent(recipe.title) %>">
+                    <!-- Display the image with the title as the alt text. -->
+                    <img src="<%= recipe.image %>" alt="<%= recipe.title %>" class="recipe-image">
+                </a>
+                <h2>
+
+                    <a href="/recipe/<%= encodeURIComponent(recipe.title) %>"><%= recipe.title %></a>
+                </h2>
+            </div>
+        <% }); %>
+    </section>
+</main>
+
     <!-- This will include the footer, which contains the copyright information. -->
     <%- include("footer") -%>
 </body>

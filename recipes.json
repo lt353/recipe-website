@@ -1,0 +1,283 @@
+{
+    "recipes": [
+      {
+        "title": "Green Thai Chicken Curry",
+        "content": "This is one of my favorite Thai dishes to make. It’s packed with flavor but still really easy to throw together. The chicken soaks up all the flavors from the green curry paste, lemongrass, and garlic. Coconut milk makes it creamy, while fish sauce, brown sugar, and crispy chili flakes balance everything out. The real magic happens when the Thai basil goes in—that’s when all the flavors really come together. If you don’t have Thai basil, you should start growing it in your yard. It does really well in Hawaii. But if you don’t have any on hand, I’ve found that a mix of regular basil and mint gives you a similar effect. I always serve it over a steaming bowl of brown basmati rice.",
+        "image": "images/thaiCurry.jpg",
+        "ingredients": [
+          {
+            "quantity": "5",
+            "unit": "",
+            "ingredient": "Boneless/Skinless Chicken thighs"
+          },
+          {
+            "quantity": "1/2",
+            "unit": "",
+            "ingredient": "onion"
+          },
+          {
+            "quantity": "2",
+            "unit": "tbsp",
+            "ingredient": "garlic"
+          },
+          {
+            "quantity": "2",
+            "unit": "tbsp",
+            "ingredient": "ginger"
+          },
+          {
+            "quantity": "1",
+            "unit": "stalk",
+            "ingredient": "lemongrass"
+          },
+          {
+            "quantity": "4",
+            "unit": "tbsp",
+            "ingredient": "curry paste"
+          },
+          {
+            "quantity": "1",
+            "unit": "tbsp",
+            "ingredient": "crispy chili"
+          },
+          {
+            "quantity": "1",
+            "unit": "tbsp",
+            "ingredient": "brown sugar"
+          },
+          {
+            "quantity": "1",
+            "unit": "tbsp",
+            "ingredient": "fish sauce"
+          },
+          {
+            "quantity": "1",
+            "unit": "tbsp",
+            "ingredient": "chicken bouillon"
+          },
+          {
+            "quantity": "1",
+            "unit": "cup",
+            "ingredient": "water"
+          },
+          {
+            "quantity": "1",
+            "unit": "large",
+            "ingredient": "carrot"
+          },
+          {
+            "quantity": "1",
+            "unit": "",
+            "ingredient": "red bell pepper"
+          },
+          {
+            "quantity": "2",
+            "unit": "cans",
+            "ingredient": "coconut milk"
+          },
+          {
+            "quantity": "1",
+            "unit": "",
+            "ingredient": "lime"
+          },
+          {
+            "quantity": "a couple",
+            "unit": "handfuls",
+            "ingredient": "thai basil"
+          }
+        ],
+        "instructions": [
+          "Heat avocado oil in a large pan over medium-high heat.",
+          "Add a spoonful of curry paste and mix with a small amount of coconut milk to create a fragrant base.",
+          "Add the chicken thighs and cook until nearly done, about 6-7 minutes per side.",
+          "Remove the chicken from the pan and set aside.",
+          "In the same pan, add the sliced onion, minced garlic, and grated ginger.",
+          "Slice the bottom quarter of a stalk of lemongrass very thinly and add it to the pan.",
+          "Stir-fry everything for about 2 minutes until softened and aromatic.",
+          "Add the remaining curry paste and mix well into the sautéed ingredients.",
+          "Cook for another 1-2 minutes to release the full flavors of the paste.",
+          "Add the crispy chili, brown sugar, fish sauce, chicken bouillon, and 1 cup of water.",
+          "Stir everything together and let it simmer for about 10 minutes, allowing the liquid to reduce by half.",
+          "Slice the carrot into thin diagonal pieces and julienne the red bell pepper.",
+          "Add the carrot and bell pepper to the pan and cook for 2-3 minutes until slightly softened but still vibrant.",
+          "Pour in 2 cans of coconut milk and squeeze the juice of 1 lime into the mixture.",
+          "Stir well and let it cook for another 1-2 minutes to blend the flavors.",
+          "Return the cooked chicken (along with any juices) back to the pan.",
+          "Stir it into the sauce and let everything simmer together for an additional 2-3 minutes.",
+          "Tear a couple of handfuls of Thai basil and mix it in.",
+          "Cook for a final 1-2 minutes, allowing the basil to wilt slightly and release its flavor.",
+          "Serve hot over a bed of steamed jasmine or basmati rice."
+        ]
+      },
+      {
+        "title": "Crispy Chicken Griddle Tacos",
+        "content": "These tacos are simple but hit the spot. Rotisserie chicken, onions, and taco seasoning make up the filling, and black beans add some extra texture. You can either use the taco seasoning mix or make your own using the spice blend in the recipe—depends on how lazy you're feeling. The real game changer is pressing the tortillas onto the griddle with cheese—it melts into the shell and gets crispy. The result? Crunchy, cheesy tacos that taste way better than they should for how easy they are. You could probably make these in a regular pan, but it would take way longer. A flat griddle is a godsend for any kitchen. Top them with salsa, guac, or whatever you like.",
+        "image": "images/chickenTacos.jpg",
+        "ingredients": [
+          {
+            "quantity": "2",
+            "unit": "cups",
+            "ingredient": "Costco rotisserie chicken, shredded"
+          },
+          {
+            "quantity": "1",
+            "unit": "",
+            "ingredient": "onion, thinly sliced"
+          },
+          {
+            "quantity": "1",
+            "unit": "",
+            "ingredient": "red bell pepper, thinly sliced"
+          },
+          {
+            "quantity": "3",
+            "unit": "cloves",
+            "ingredient": "garlic, minced"
+          },
+          {
+            "quantity": "1",
+            "unit": "",
+            "ingredient": "lime, juiced"
+          },
+          {
+            "quantity": "½",
+            "unit": "tsp",
+            "ingredient": "chili flakes"
+          },
+          {
+            "quantity": "1",
+            "unit": "packet",
+            "ingredient": "McCormick Hot Taco Seasoning (or homemade version)"
+          },
+          {
+            "quantity": "1",
+            "unit": "can",
+            "ingredient": "black beans, drained and rinsed"
+          },
+          {
+            "quantity": "12",
+            "unit": "",
+            "ingredient": "corn tortillas"
+          },
+          {
+            "quantity": "2",
+            "unit": "cups",
+            "ingredient": "cheddar cheese, shredded (optional)"
+          },
+          {
+            "quantity": "",
+            "unit": "",
+            "ingredient": "Avocado oil spray"
+          }
+        ],
+        "instructions": [
+          "Heat a large skillet over medium heat and spray with avocado oil.",
+          "Add the onion and red bell pepper; cook until softened, about 5 minutes.",
+          "Add the garlic, chili flakes, and taco seasoning, stirring and cooking for another minute.",
+          "Add the shredded chicken and black beans.",
+          "Stir everything together, squeeze in the lime juice, and cook for an additional 3-5 minutes until heated through.",
+          "Remove from heat.",
+          "Heat a flat griddle over medium heat and spray with avocado oil.",
+          "Place the corn tortillas on the griddle and sprinkle a generous layer of cheddar cheese on each (if using).",
+          "Spoon the chicken mixture onto one half of each tortilla.",
+          "Allow the cheese to melt for a minute, then carefully fold each taco in half.",
+          "Cook for 2-3 minutes per side, pressing down slightly, until both sides are crispy and golden brown."
+        ]
+      },
+      {
+        "title": "Chicken Marsala",
+        "content": "This can definitely be made with chicken breasts, but I think it works best with thighs since they stay juicy and never dry out. The chicken is lightly coated in flour, pan-fried, and then simmered in a sauce made from Marsala wine, mushrooms, and broth. A little heavy cream makes the sauce rich without being too heavy. Just a heads up—this tends to result in a ton of sauce, so plan your mashed potato levels accordingly. Also, it’s not the thickest sauce, so if you like it a little thicker, you might want to reduce it more or add a thickener. Some people serve this over pasta, but in my house, it’s always over mashed potatoes. It just works better that way.",
+        "image": "images/chickenMarsala.jpg",
+        "ingredients": [
+          {
+            "quantity": "1½",
+            "unit": "pounds",
+            "ingredient": "boneless skinless chicken thighs, pounded ¼-inch thick"
+          },
+          {
+            "quantity": "3",
+            "unit": "tablespoons",
+            "ingredient": "all-purpose flour"
+          },
+          {
+            "quantity": "",
+            "unit": "",
+            "ingredient": "Salt"
+          },
+          {
+            "quantity": "",
+            "unit": "",
+            "ingredient": "Freshly ground black pepper"
+          },
+          {
+            "quantity": "1",
+            "unit": "tablespoon",
+            "ingredient": "olive oil"
+          },
+          {
+            "quantity": "3",
+            "unit": "tablespoons",
+            "ingredient": "unsalted butter, divided"
+          },
+          {
+            "quantity": "1",
+            "unit": "package (8-oz)",
+            "ingredient": "pre-sliced bella or button mushrooms"
+          },
+          {
+            "quantity": "3",
+            "unit": "tablespoons",
+            "ingredient": "finely chopped shallots (from 1 medium shallot)"
+          },
+          {
+            "quantity": "2",
+            "unit": "cloves",
+            "ingredient": "garlic, minced"
+          },
+          {
+            "quantity": "⅔",
+            "unit": "cup",
+            "ingredient": "chicken broth"
+          },
+          {
+            "quantity": "⅔",
+            "unit": "cup",
+            "ingredient": "dry Marsala wine"
+          },
+          {
+            "quantity": "⅔",
+            "unit": "cup",
+            "ingredient": "heavy cream"
+          },
+          {
+            "quantity": "2",
+            "unit": "teaspoons",
+            "ingredient": "chopped fresh thyme"
+          },
+          {
+            "quantity": "2",
+            "unit": "tablespoons",
+            "ingredient": "chopped fresh Italian parsley (optional)"
+          }
+        ],
+        "instructions": [
+          "Place the flour, salt, and pepper in a ziplock bag.",
+          "Add the chicken, seal the bag tightly and shake to coat evenly.",
+          "Set the chicken aside.",
+          "Heat the olive oil and 2 tablespoons of the butter in a large skillet over medium-high heat.",
+          "Place the flour-dusted chicken in the pan, shaking off any excess.",
+          "Cook for about 5 to 6 minutes total, turning once, until golden and just barely cooked through.",
+          "Transfer the chicken to a plate and set aside.",
+          "Melt the remaining tablespoon of butter in the pan.",
+          "Add the mushrooms and cook, stirring frequently, until they begin to brown, about 3 to 4 minutes.",
+          "Add the shallots, garlic, and ¼ teaspoon salt; cook for 1 to 2 minutes more.",
+          "Add the chicken broth, Marsala wine, heavy cream, thyme, and an additional ¼ teaspoon salt.",
+          "Use a wooden spoon to scrape any brown bits from the pan into the liquid.",
+          "Bring the liquid to a boil, then reduce the heat to medium and simmer, uncovered, until the sauce is reduced by about half—approximately 10 to 15 minutes.",
+          "Return the chicken to the pan along with any juices that have accumulated on the plate.",
+          "Reduce the heat to low and simmer until the chicken is warmed through and the sauce thickens slightly, about 2 to 3 minutes.",
+          "Serve warm, optionally topped with fresh Italian parsley."
+        ]
+      }
+    ]
+  }
