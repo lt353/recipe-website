@@ -62,7 +62,10 @@ app.use(express.static("public"));
  */
 const loadRecipes = () => {
     if (fs.existsSync(FILE_PATH)) {
-        // Reads from the recipes array in the recipes.json file    
+        // Reads from the recipes array in the recipes.json file. 
+        // JSON.parse is used to convert the string into a JSON object
+        // fs.readFileSync is used to read the file synchronously meaning 
+        // it will block the code until it is done reading the file   
         return JSON.parse(fs.readFileSync(FILE_PATH, "utf8")).recipes;
     }
     return [];
@@ -74,7 +77,7 @@ const loadRecipes = () => {
  * - Botht he image and the title will be clickable
  */
 app.get("/", function (req, res) {
-    const recipes = loadRecipes(); // Loads recipes dynamically
+    const recipes = loadRecipes(); // Loads recipes dynamically from the JSON file
     res.render("index", {
         title: "Welcome to My Recipes",
         recipes: recipes //passing the recipes array to the index.ejs file
@@ -89,14 +92,15 @@ app.get("/", function (req, res) {
  */
 app.get("/recipe/:title", (req, res) => {
     const recipes = loadRecipes(); // Loads recipes dynamically
+    // Finds the recipe object in the recipes array that matches the title in the URL
     const recipe = recipes.find(recipe => recipe.title.toLowerCase() === req.params.title.toLowerCase());
-
+    // If the recipe is not found, send a 404 status and message
     if (!recipe) {
         res.status(404).send("Recipe not found.");
     }
     // Render the full recipe page with the recipe object
     res.render("recipes", {
-        recipe: recipe,
+        recipe: recipe, //passing the recipe object to the recipes
         recipes: recipes, //needed for navigation in the header
         currentPage: recipe.title // Identifies the current recipe page for header.ejs
     });

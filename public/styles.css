@@ -13,8 +13,8 @@ body {
     color: #333; /* Text color set to Dark Gray */
     /* The following ensures the footer stays fixed at the bottom */
     display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+    grid-template-rows: auto 1fr auto; /* Creates a grid layout with header, main content, and footer */
+    min-height: 100vh; /* Ensures the footer stays at the bottom */
 }
 
 /* Header */
@@ -28,7 +28,7 @@ header {
     position: relative; /* Allows us to add a shadow effect below */
 }
 
-/* Creates a subtle fading shadow below the header */
+/* Creates a subtle fading shadow below the header (ChatGPT helped me learn about this */
 header::after {
     content: ""; /* This pseudo-element acts as a visual effect */
     position: absolute; /* Positions it relative to the header */
@@ -43,7 +43,7 @@ header::after {
 header h1 {
     font-size: 40px;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* helps it standout from the background */
 } 
 
 /* Navigation Bar*/
@@ -81,7 +81,7 @@ nav a:hover {
 }
 
 /* Intro Section Heading homepage */
-.intro hi {
+.intro h1 {
     font-size: 32px;
     font-weight: bold;
     color: #015777; /* Deep Blue */
@@ -90,8 +90,8 @@ nav a:hover {
 
 /* Intro section text below the heading */
 .intro p {
-    font-size: 18px;
-    line-height: 1.6; /* Improves readability */
+    font-size: 16px;
+    line-height: 1.4; /* Improves readability */
     text-align: left; /* Aligns text to the left */
     color: #015777; /* Deep Blue */
     margin-bottom: 10px; /* Adds space below the paragraph */
@@ -100,19 +100,19 @@ nav a:hover {
 /* Main Content */
 main {
     background-color: rgba(255, 255, 255, 0.85); /* Increases opacity for better readability */
-    padding: 40px; /* Adds spacing inside */
-    border-radius: 12px; /* Slightly rounded corners for modern look */
-    margin: 40px auto; /* Adds vertical spacing */
-    width: 65%;
-    max-width: 1500px;
+    padding: 40px; /* Adds spacing inside the main content */
+    border-radius: 12px; /* Slightly rounded corners */
+    margin: 40px auto; /* Centers the content */
+    width: 65%; /* Adjusts width for responsiveness when the screen size changes */
+    max-width: 1500px; /* Limits width for better readability */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
 }
 
-/* === Recipe Grid (homepage) === */
+/* Recipe Grid (homepage) */
 .recipe-grid {
     display: grid; /* Enables grid layout, similar to a table, but more flexible */
     /* Creates responsive columns so that each recipe card fits even on small screens */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 1fr means each column takes up an equal amount of space */
     gap: 20px; /* Adds space between recipe cards */
     justify-content: center;
     padding: 20px;
@@ -155,16 +155,15 @@ main {
 }
 
 .recipe-card a:hover {
-    color: #e67e22; /* Orange color on hover */
+    color: #e67e22; /* Orange color when user moves mouse over the card */
 }
 
-/* Recipe title styling */
+/* Recipe title styling on full recipe pages*/
 h2 {
     font-size: 36px; 
     font-weight: bold;
     text-align: center;
     color: #015777; /* Deep Blue */
-    margin-bottom: 10px;
 }
 
 /* Section Headers: "Ingredients" & "Instructions" */
@@ -175,25 +174,9 @@ h3 {
     color: #0a6765; /* Dark Teal for consistent theme */
     text-align: left;
     margin-bottom: 15px;
-    border-bottom: 2px solid #ddd; /* Subtle underline for separation */
+    border-bottom: 2px solid #0a6765; /* Underline for separation */
     padding-bottom: 5px;
 }
-
-/* List styling for ingredients and instructions */
-.ingredient-list,
-.instruction-list {
-    font-size: 20px;
-    padding-left: 20px; 
-}
-
-.ingredient-list li,
-.instruction-list li {
-    margin-bottom: 12px; /* Adds space between items */
-    line-height: 1.6; /* Improves readability */
-    /*removes bullets from the list*/
-    list-style-type: none;
-}
-
 
 /* Centers the recipe page image (not homepage) */
 .image-container {
@@ -220,37 +203,18 @@ h3 {
     }
 }
 
-/* Ingredients List: Simple and aligned */
-.ingredient-list {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding-left: 10px;
-    text-align: left;
-}
-
-/* Instructions List: Removes bullets */
+/* Combined list styling for ingredients and instructions */
+.ingredient-list,
 .instruction-list {
-    list-style-type: none; /* No bullets */
-    padding-left: 0;
+    font-size: 15px;
+    padding-left: 20px; /* Indents the lists */
     text-align: left;
+    list-style-type: none; /* No bullet points */
 }
 
-/* Improves spacing for both lists */
 .ingredient-list li,
 .instruction-list li {
-    margin-bottom: 12px; /* Adds spacing between items */
-    line-height: 1.6; /* Improves readability */
-    display: flex;
-    align-items: flex-start;
-    gap: 8px; /* Adds space between icon and text */
-}
-
-/* Makes step numbers bold and readable */
-.instruction-list li strong {
-    font-size: 18px;
-    flex-shrink: 0;
-    width: 70px;
-    text-align: left;
+    margin-bottom: 10px; /* Adds space between list items helping with readability */
 }
 
 /* This adjusts the print button on the recipe pages */
@@ -258,7 +222,7 @@ h3 {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     color: white;
     background-color: #015777; /* Matches theme */
