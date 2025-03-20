@@ -51,3 +51,4 @@ Although this now meets the project requirements, there are some things I could 
   - Let user add recipes
     - I found an npm called ingredient-parser which can be used to turn long ingredient lists that users enter and turn it into structured JSON, handy. 
     - I found the multer npm can be used to allow users to add images to the recipes they add
+  - A search functionality for when/if the website has more than 3 recipes. 
