@@ -1,4 +1,4 @@
-/* General Styles */
+/* ==General Styles== */
 body {
     font-family: "Times New Roman", serif;
     margin: 0;
@@ -17,7 +17,7 @@ body {
     min-height: 100vh; /* Ensures the footer stays at the bottom */
 }
 
-/* Header */
+/* ==HEADER== */
 header {
     background-image: url('/images/header.jpg'); /* Sets the background image for the header */
     background-size: cover; /* Ensures the image covers the entire header */
@@ -46,7 +46,7 @@ header h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* helps it standout from the background */
 } 
 
-/* Navigation Bar*/
+/* ==Navigation Bar in the header==*/
 nav {
     background-color: rgba(100, 100, 100, 0.6); /* Semi-transparent grey */
     padding: 15px;
@@ -68,7 +68,8 @@ nav a:hover {
     color: #ffd700; /* Yellowish Gold */
 }
 
-/*Intro Section on the homepage*/
+/* ==HOMEPAGE== */
+/* Intro Section */
 .intro {
     text-align: center;
     background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
@@ -80,7 +81,7 @@ nav a:hover {
     width: 70%; /* Adjusts width for responsiveness */
 }
 
-/* Intro Section Heading homepage */
+/* Intro Section Heading */
 .intro h1 {
     font-size: 32px;
     font-weight: bold;
@@ -108,12 +109,12 @@ main {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
 }
 
-/* Recipe Grid (homepage) */
+/* Recipe Grid  */
 .recipe-grid {
     display: grid; /* Enables grid layout, similar to a table, but more flexible */
     /* Creates responsive columns so that each recipe card fits even on small screens */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 1fr means each column takes up an equal amount of space */
-    gap: 20px; /* Adds space between recipe cards */
+    gap: 15px; /* Adds space between recipe cards */
     justify-content: center;
     padding: 20px;
 }
@@ -143,7 +144,7 @@ main {
 
 /* Recipe Title located below the thumbnail */
 .recipe-card h2 {
-    font-size: 24px;
+    font-size: 20px;
     margin: 10px 0; /* Adds space above and below the title */
 }
 
@@ -158,6 +159,7 @@ main {
     color: #e67e22; /* Orange color when user moves mouse over the card */
 }
 
+/* ==RECIPE PAGES== */
 /* Recipe title styling on full recipe pages*/
 h2 {
     font-size: 36px; 
@@ -217,6 +219,7 @@ h3 {
     margin-bottom: 10px; /* Adds space between list items helping with readability */
 }
 
+/* ==PRINT BUTTON== */
 /* This adjusts the print button on the recipe pages */
 .print-button {
     display: block;
@@ -259,7 +262,7 @@ h3 {
     }
 }
 
-/* Footer */
+/* ==FOOTER== */
 footer {
     background-color: #d0dcdc; /* Light Gray-Blue */
     color: #333; /* Dark Gray */
