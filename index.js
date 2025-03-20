@@ -1,5 +1,3 @@
-//jshint esversion:6
-
 /*
  * Assignment: Recipe Website
  * Description: 
@@ -15,7 +13,16 @@
  * - The website uses a custom CSS file for styling.
  *   
  * Author: Lindsay Trenton 
- * Date: February 2025
+ * Date: March 2025
+ * 
+ * Wireframe: a simple wireframe was created to help guide the design of the website using figma. 
+ *      Here is the link: https://www.figma.com/proto/8h04jJjVaL8BlXTsjqDVr5/Recipe-Website-wireframe?node-id=0-1&t=L7vAkP1WgrJTJVBd-1
+ * 
+ * ChatGPT was used to help figure out how to do some of the more complicated parts of the website: 
+ * - It helped me with the grunt work of turning my recipes into JSON format
+ * - It helped me figure out how to get printing to work properly
+ * - It helped me a lot with CSS styling and how to make things look a little more professional
+ * - It helped me figure out how to make  the navigation bar more dynamic so that it would change depending on what page you were on
  * 
  * External Packages Used:
  * - express (http://www.npmjs.com/package/express)
@@ -77,7 +84,7 @@ app.get("/", function (req, res) {
 /*
  * Route: Individual Recipe Pages
  * - Each recipe has its own URL
- * - Each recipe has a title, image, ingredients, instructions, and print button
+ * - Each recipe has a title, image, ingredients, instructions, and print button 
  * - the title is used in the URL and is passed to the EJS file
  */
 app.get("/recipe/:title", (req, res) => {

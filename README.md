@@ -8,7 +8,7 @@ This is a bare bones website with 4 webpages:
 There is a navigation bar in the header which is available throughout all the webpages, though on the homepage it will just be welcome text. In each recipe page it will contain links to the homepage and the 2 other recipes. 
 There is also a footer available  as well on every page.
 
-I am basing the layout on this base figma wirefram: https://www.figma.com/design/8h04jJjVaL8BlXTsjqDVr5/Recipe-Website-wireframe?node-id=0-1&m=dev&t=tz2bUddGlKwR2MFJ-1 
+I am basing the layout on this base figma wirefram: https://www.figma.com/proto/8h04jJjVaL8BlXTsjqDVr5/Recipe-Website-wireframe?node-id=0-1&t=L7vAkP1WgrJTJVBd-1 
 
 # Completed previously: 
 - Improved navigation
