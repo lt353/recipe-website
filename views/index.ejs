@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Recipe Collection Homepage</title>
     <link rel="stylesheet" href="/styles.css">
+    <!-- This allows me to use the linkedIn icon in the footer. I used ChatGPT to figure this out. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-oE2r9WY9WZy+p/fkxyxKoOCEo4EJqCeWFnP7tVwPPDlNNk1lUeZWAWODd72C+1Pi9x1kmcH8zycpkPoI03Vi2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-- This will include the header, which contains the title and navigation bar. -->
@@ -31,7 +33,7 @@
     <!-- This is the grid of recipe cards. 
          It will display a card for each recipe in the recipes array. Both the image and 
          the title of the recipe will be displayed on the card and will be clickable. -->
-    <section class="recipe-grid">
+    <section class="recipe-grid" id="recipes">
         <% recipes.forEach(recipe => { %>
             <div class="recipe-card">
                 <!-- encodeURIComponent is used to encode the title so that it can be safely passed in the URL. 

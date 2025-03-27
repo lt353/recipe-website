@@ -1,3 +1,15 @@
+/*
+  === Site Theme ===
+  The colors are mostly deep blue (#015777), teal (#0a6765), orange (#e67e22), and a golden yellow (#ffd700). 
+  Blue and teal are used for headings and buttons to give it an ocean-y, calming feel. 
+  The orange and yellow are used for hover effects so links pop out more.
+
+  The background image in the body has a mix of fruit and soft colors, and the header has a plate with food, 
+  so I picked colors that wouldn’t clash and would still be easy to read.
+  Most of the content areas have a white or light semi-transparent background so the background image shows 
+  through just enough without messing with readability.
+*/
+
 /* ==General Styles== */
 body {
     font-family: "Times New Roman", serif;
@@ -28,6 +40,14 @@ header {
     position: relative; /* Allows us to add a shadow effect below */
 }
 
+a {
+    color: #035a69; /* Makes links a dark teal color */
+}
+
+a:hover {
+    color: #e67e22; /* Orange color when user moves mouse over the link */
+}
+
 /* Creates a subtle fading shadow below the header (ChatGPT helped me learn about this */
 header::after {
     content: ""; /* This pseudo-element acts as a visual effect */
@@ -42,7 +62,6 @@ header::after {
 /* Header text styling */
 header h1 {
     font-size: 40px;
-    color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* helps it standout from the background */
 } 
 
@@ -50,7 +69,6 @@ header h1 {
 nav {
     background-color: rgba(100, 100, 100, 0.6); /* Semi-transparent grey */
     padding: 15px;
-    text-align: center;
     border-radius: 8px; /* Softens edges */
 }
 
@@ -71,7 +89,6 @@ nav a:hover {
 /* ==HOMEPAGE== */
 /* Intro Section */
 .intro {
-    text-align: center;
     background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
     padding: 25px;
     margin: 20px auto; /* Auto centers the section */
@@ -124,7 +141,6 @@ main {
     background: white;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    text-align: center;
     padding: 15px;
     transition: transform 0.2s ease-in-out; /* this means that when you hover over the card, it grows in size, but smoothly*/
 }
@@ -151,7 +167,6 @@ main {
 /* Recipe Card Link */
 .recipe-card a {
     text-decoration: none; /* Removes underline */
-    color: #333;
     font-weight: bold;
 }
 
@@ -164,7 +179,6 @@ main {
 h2 {
     font-size: 36px; 
     font-weight: bold;
-    text-align: center;
     color: #015777; /* Deep Blue */
 }
 
@@ -182,7 +196,6 @@ h3 {
 
 /* Centers the recipe page image (not homepage) */
 .image-container {
-    text-align: center;
     margin: 30px 0; /* Adds space above and below the image */
 }
 
@@ -191,14 +204,12 @@ h3 {
     width: 100%; /* Ensures the image scales with the container */
     max-width: 800px; /* Prevents it from getting too large */
     height: auto; /* Maintains aspect ratio */
-    display: block; /* Prevents extra space below the image */
-    margin: 0 auto; /* Centers the image */
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     object-fit: contain; /* Ensures the full image is visible without cropping */
 }
 
-/* Ensures image is responsive on small screens */
+/* Makes sure the image is responsive on a small screens */
 @media (max-width: 768px) {
     .recipe-image-large {
         width: 90%;
@@ -265,7 +276,20 @@ h3 {
 /* ==FOOTER== */
 footer {
     background-color: #d0dcdc; /* Light Gray-Blue */
-    color: #333; /* Dark Gray */
+    font-weight: bold;
+    color: #00649b; /* This is linkedIn blue apparently*/
     padding: 10px;
     text-align: center;
 }
+
+.linkedin-icon {
+    width: 75px;
+    height: auto;
+    vertical-align: text-bottom;
+    margin-left: 3px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .linkedin-icon:hover {
+    transform: scale(1.1);
+  }
